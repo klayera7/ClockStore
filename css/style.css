@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cccccc;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #c5c5c5;
+    box-shadow: 0px 0px 10px #242424;
+}
+
+#ClockStore {
+    color: #1a1a1a;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-left: 30px;
+}
+
+#navegacao ul{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+}
+
+#navegacao li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #000000;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+}
+
+#navegacao li a::before,
+#navegacao li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #000000;
+  transform: scaleX(0);
+  transition: transform 0.7s ease;
+}
+
+#navegacao li a::before {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+#navegacao li a::after {
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+#navegacao li a:hover::before {
+  transform: scaleX(1);
+}
+
+#navegacao li a:hover::after {
+  transform: scaleX(1);
+}
