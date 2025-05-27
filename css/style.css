@@ -49,7 +49,7 @@ header {
   width: 100%;
   background: #000000;
   transform: scaleX(0);
-  transition: transform 0.7s ease;
+  transition: transform 0.4s ease;
 }
 
 #navegacao li a::before {
@@ -77,8 +77,12 @@ section {
   display: flex;
   justify-self: center;
   width: 1500px;
+  box-shadow: 0px 0px 2px #1a1a1a;
+  border-radius: 8px;
+  gap: 10px;
 }
 
+/* section 1 */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -97,17 +101,30 @@ section {
   height: 560px;
   border: none;
   outline: none;
-  box-shadow: 0px 0px 4px #000000;
-  border-radius: 2px;
-  animation: fadeIn 1s ease-in-out forwards;
+  box-shadow: 2px 0px 6px #000000;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  animation: fadeIn 0.6s ease-in-out forwards;
 }
 
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+
 #p1 {
-  color: #1a1a1a;
+  color: #1d1d1d;
   margin-left: 10px;
   font-size: 1.8rem;
-  animation: fadeIn 1.2s ease-in-out forwards;
-  animation-delay: 1s;
+  animation: slideFromLeft 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
   opacity: 0;
 }
 
